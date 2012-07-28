@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MapViewController.h
 //  HoorooHoliday
 //
 //  Created by James Dunwoody on 28/07/12.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import <MapKit/MKMapView.h>
+
+@interface MapViewController : UIViewController
+
+@property(nonatomic,retain) IBOutlet MKMapView *mapView;
 
 @end

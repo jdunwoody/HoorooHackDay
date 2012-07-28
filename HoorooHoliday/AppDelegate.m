@@ -7,11 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "MapViewController.h"
+#import "MapViewDelegate.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    LoginViewController *loginViewController = (LoginViewController *)self.window.rootViewController;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
+  
+    MapViewController *mapViewController = (MapViewController *)[storyboard instantiateViewControllerWithIdentifier: @"mapViewController"];
+    
+    MapViewDelegate *mapViewDelegate = [[MapViewDelegate alloc] initWithMapView:mapViewController.mapView];
+    mapViewController.mapView.delegate = mapViewDelegate;
+    
     // Override point for customization after application launch.
     return YES;
 }
