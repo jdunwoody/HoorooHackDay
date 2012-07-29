@@ -7,6 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A41B48B15C56A47004B2D44 /* adelaide_hills.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46215C56A47004B2D44 /* adelaide_hills.png */; };
+		1A41B48C15C56A47004B2D44 /* adelaide.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46315C56A47004B2D44 /* adelaide.png */; };
+		1A41B48D15C56A47004B2D44 /* barossa_valley.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46415C56A47004B2D44 /* barossa_valley.png */; };
+		1A41B48E15C56A47004B2D44 /* blue_mountains.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46515C56A47004B2D44 /* blue_mountains.png */; };
+		1A41B48F15C56A47004B2D44 /* brisbane.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46615C56A47004B2D44 /* brisbane.png */; };
+		1A41B49015C56A47004B2D44 /* broome.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46715C56A47004B2D44 /* broome.png */; };
+		1A41B49115C56A47004B2D44 /* byron_bay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46815C56A47004B2D44 /* byron_bay.png */; };
+		1A41B49215C56A47004B2D44 /* cairns.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46915C56A47004B2D44 /* cairns.png */; };
+		1A41B49315C56A47004B2D44 /* canberra.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46A15C56A47004B2D44 /* canberra.png */; };
+		1A41B49415C56A47004B2D44 /* central_coast.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46B15C56A47004B2D44 /* central_coast.png */; };
+		1A41B49515C56A47004B2D44 /* cradle_mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46C15C56A47004B2D44 /* cradle_mountain.png */; };
+		1A41B49615C56A47004B2D44 /* darwin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46D15C56A47004B2D44 /* darwin.png */; };
+		1A41B49715C56A47004B2D44 /* daylesford.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46E15C56A47004B2D44 /* daylesford.png */; };
+		1A41B49815C56A47004B2D44 /* exmouth.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B46F15C56A47004B2D44 /* exmouth.png */; };
+		1A41B49915C56A47004B2D44 /* fleurieu_peninsula.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47015C56A47004B2D44 /* fleurieu_peninsula.png */; };
+		1A41B49A15C56A47004B2D44 /* fraser_island.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47115C56A47004B2D44 /* fraser_island.png */; };
+		1A41B49B15C56A47004B2D44 /* gold_coast.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47215C56A47004B2D44 /* gold_coast.png */; };
+		1A41B49C15C56A47004B2D44 /* great_ocean_road.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47315C56A47004B2D44 /* great_ocean_road.png */; };
+		1A41B49D15C56A47004B2D44 /* hobart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47415C56A47004B2D44 /* hobart.png */; };
+		1A41B49E15C56A47004B2D44 /* hunter_valley.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47515C56A47004B2D44 /* hunter_valley.png */; };
+		1A41B49F15C56A47004B2D44 /* kakadu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47615C56A47004B2D44 /* kakadu.png */; };
+		1A41B4A015C56A47004B2D44 /* kangaroo_island.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47715C56A47004B2D44 /* kangaroo_island.png */; };
+		1A41B4A115C56A47004B2D44 /* kimberley.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47815C56A47004B2D44 /* kimberley.png */; };
+		1A41B4A215C56A47004B2D44 /* launceston.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47915C56A47004B2D44 /* launceston.png */; };
+		1A41B4A315C56A47004B2D44 /* lord_howe_island.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47A15C56A47004B2D44 /* lord_howe_island.png */; };
+		1A41B4A415C56A47004B2D44 /* margaret_river.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47B15C56A47004B2D44 /* margaret_river.png */; };
+		1A41B4A515C56A47004B2D44 /* melbourne.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47C15C56A47004B2D44 /* melbourne.png */; };
+		1A41B4A615C56A47004B2D44 /* mornington_peninsula.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47D15C56A47004B2D44 /* mornington_peninsula.png */; };
+		1A41B4A715C56A47004B2D44 /* ningaloo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47E15C56A47004B2D44 /* ningaloo.png */; };
+		1A41B4A815C56A47004B2D44 /* noosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B47F15C56A47004B2D44 /* noosa.png */; };
+		1A41B4A915C56A47004B2D44 /* north_coast.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48015C56A47004B2D44 /* north_coast.png */; };
+		1A41B4AA15C56A47004B2D44 /* perth.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48115C56A47004B2D44 /* perth.png */; };
+		1A41B4AB15C56A47004B2D44 /* phillip_island.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48215C56A47004B2D44 /* phillip_island.png */; };
+		1A41B4AC15C56A47004B2D44 /* port_douglas.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48315C56A47004B2D44 /* port_douglas.png */; };
+		1A41B4AD15C56A47004B2D44 /* south_coast.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48415C56A47004B2D44 /* south_coast.png */; };
+		1A41B4AE15C56A47004B2D44 /* sunshine_coast.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48515C56A47004B2D44 /* sunshine_coast.png */; };
+		1A41B4AF15C56A47004B2D44 /* sydney.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48615C56A47004B2D44 /* sydney.png */; };
+		1A41B4B015C56A47004B2D44 /* townsville.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48715C56A47004B2D44 /* townsville.png */; };
+		1A41B4B115C56A47004B2D44 /* uluru.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48815C56A47004B2D44 /* uluru.png */; };
+		1A41B4B215C56A47004B2D44 /* whitsundays.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48915C56A47004B2D44 /* whitsundays.png */; };
+		1A41B4B315C56A47004B2D44 /* yarra_valley.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48A15C56A47004B2D44 /* yarra_valley.png */; };
 		1A84BCCE15C3C6270024BBE5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEAE27F15C38E85002E24C3 /* MapKit.framework */; };
 		1ACB9AFD15C3F8960098E15A /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9AFC15C3F8960098E15A /* LocationService.m */; };
 		1ACB9B0115C3FF720098E15A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0015C3FF720098E15A /* LoginViewController.m */; };
@@ -34,6 +75,47 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A41B46215C56A47004B2D44 /* adelaide_hills.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adelaide_hills.png; sourceTree = "<group>"; };
+		1A41B46315C56A47004B2D44 /* adelaide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adelaide.png; sourceTree = "<group>"; };
+		1A41B46415C56A47004B2D44 /* barossa_valley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barossa_valley.png; sourceTree = "<group>"; };
+		1A41B46515C56A47004B2D44 /* blue_mountains.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_mountains.png; sourceTree = "<group>"; };
+		1A41B46615C56A47004B2D44 /* brisbane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brisbane.png; sourceTree = "<group>"; };
+		1A41B46715C56A47004B2D44 /* broome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broome.png; sourceTree = "<group>"; };
+		1A41B46815C56A47004B2D44 /* byron_bay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = byron_bay.png; sourceTree = "<group>"; };
+		1A41B46915C56A47004B2D44 /* cairns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cairns.png; sourceTree = "<group>"; };
+		1A41B46A15C56A47004B2D44 /* canberra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canberra.png; sourceTree = "<group>"; };
+		1A41B46B15C56A47004B2D44 /* central_coast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = central_coast.png; sourceTree = "<group>"; };
+		1A41B46C15C56A47004B2D44 /* cradle_mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cradle_mountain.png; sourceTree = "<group>"; };
+		1A41B46D15C56A47004B2D44 /* darwin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = darwin.png; sourceTree = "<group>"; };
+		1A41B46E15C56A47004B2D44 /* daylesford.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daylesford.png; sourceTree = "<group>"; };
+		1A41B46F15C56A47004B2D44 /* exmouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exmouth.png; sourceTree = "<group>"; };
+		1A41B47015C56A47004B2D44 /* fleurieu_peninsula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fleurieu_peninsula.png; sourceTree = "<group>"; };
+		1A41B47115C56A47004B2D44 /* fraser_island.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fraser_island.png; sourceTree = "<group>"; };
+		1A41B47215C56A47004B2D44 /* gold_coast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold_coast.png; sourceTree = "<group>"; };
+		1A41B47315C56A47004B2D44 /* great_ocean_road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = great_ocean_road.png; sourceTree = "<group>"; };
+		1A41B47415C56A47004B2D44 /* hobart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hobart.png; sourceTree = "<group>"; };
+		1A41B47515C56A47004B2D44 /* hunter_valley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hunter_valley.png; sourceTree = "<group>"; };
+		1A41B47615C56A47004B2D44 /* kakadu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakadu.png; sourceTree = "<group>"; };
+		1A41B47715C56A47004B2D44 /* kangaroo_island.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kangaroo_island.png; sourceTree = "<group>"; };
+		1A41B47815C56A47004B2D44 /* kimberley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kimberley.png; sourceTree = "<group>"; };
+		1A41B47915C56A47004B2D44 /* launceston.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launceston.png; sourceTree = "<group>"; };
+		1A41B47A15C56A47004B2D44 /* lord_howe_island.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lord_howe_island.png; sourceTree = "<group>"; };
+		1A41B47B15C56A47004B2D44 /* margaret_river.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = margaret_river.png; sourceTree = "<group>"; };
+		1A41B47C15C56A47004B2D44 /* melbourne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melbourne.png; sourceTree = "<group>"; };
+		1A41B47D15C56A47004B2D44 /* mornington_peninsula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mornington_peninsula.png; sourceTree = "<group>"; };
+		1A41B47E15C56A47004B2D44 /* ningaloo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ningaloo.png; sourceTree = "<group>"; };
+		1A41B47F15C56A47004B2D44 /* noosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noosa.png; sourceTree = "<group>"; };
+		1A41B48015C56A47004B2D44 /* north_coast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = north_coast.png; sourceTree = "<group>"; };
+		1A41B48115C56A47004B2D44 /* perth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perth.png; sourceTree = "<group>"; };
+		1A41B48215C56A47004B2D44 /* phillip_island.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phillip_island.png; sourceTree = "<group>"; };
+		1A41B48315C56A47004B2D44 /* port_douglas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = port_douglas.png; sourceTree = "<group>"; };
+		1A41B48415C56A47004B2D44 /* south_coast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = south_coast.png; sourceTree = "<group>"; };
+		1A41B48515C56A47004B2D44 /* sunshine_coast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunshine_coast.png; sourceTree = "<group>"; };
+		1A41B48615C56A47004B2D44 /* sydney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sydney.png; sourceTree = "<group>"; };
+		1A41B48715C56A47004B2D44 /* townsville.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = townsville.png; sourceTree = "<group>"; };
+		1A41B48815C56A47004B2D44 /* uluru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uluru.png; sourceTree = "<group>"; };
+		1A41B48915C56A47004B2D44 /* whitsundays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitsundays.png; sourceTree = "<group>"; };
+		1A41B48A15C56A47004B2D44 /* yarra_valley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yarra_valley.png; sourceTree = "<group>"; };
 		1ACB9AFB15C3F8960098E15A /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		1ACB9AFC15C3F8960098E15A /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
 		1ACB9AFF15C3FF720098E15A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -85,6 +167,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A41B46115C56A33004B2D44 /* locations */ = {
+			isa = PBXGroup;
+			children = (
+				1A41B46215C56A47004B2D44 /* adelaide_hills.png */,
+				1A41B46315C56A47004B2D44 /* adelaide.png */,
+				1A41B46415C56A47004B2D44 /* barossa_valley.png */,
+				1A41B46515C56A47004B2D44 /* blue_mountains.png */,
+				1A41B46615C56A47004B2D44 /* brisbane.png */,
+				1A41B46715C56A47004B2D44 /* broome.png */,
+				1A41B46815C56A47004B2D44 /* byron_bay.png */,
+				1A41B46915C56A47004B2D44 /* cairns.png */,
+				1A41B46A15C56A47004B2D44 /* canberra.png */,
+				1A41B46B15C56A47004B2D44 /* central_coast.png */,
+				1A41B46C15C56A47004B2D44 /* cradle_mountain.png */,
+				1A41B46D15C56A47004B2D44 /* darwin.png */,
+				1A41B46E15C56A47004B2D44 /* daylesford.png */,
+				1A41B46F15C56A47004B2D44 /* exmouth.png */,
+				1A41B47015C56A47004B2D44 /* fleurieu_peninsula.png */,
+				1A41B47115C56A47004B2D44 /* fraser_island.png */,
+				1A41B47215C56A47004B2D44 /* gold_coast.png */,
+				1A41B47315C56A47004B2D44 /* great_ocean_road.png */,
+				1A41B47415C56A47004B2D44 /* hobart.png */,
+				1A41B47515C56A47004B2D44 /* hunter_valley.png */,
+				1A41B47615C56A47004B2D44 /* kakadu.png */,
+				1A41B47715C56A47004B2D44 /* kangaroo_island.png */,
+				1A41B47815C56A47004B2D44 /* kimberley.png */,
+				1A41B47915C56A47004B2D44 /* launceston.png */,
+				1A41B47A15C56A47004B2D44 /* lord_howe_island.png */,
+				1A41B47B15C56A47004B2D44 /* margaret_river.png */,
+				1A41B47C15C56A47004B2D44 /* melbourne.png */,
+				1A41B47D15C56A47004B2D44 /* mornington_peninsula.png */,
+				1A41B47E15C56A47004B2D44 /* ningaloo.png */,
+				1A41B47F15C56A47004B2D44 /* noosa.png */,
+				1A41B48015C56A47004B2D44 /* north_coast.png */,
+				1A41B48115C56A47004B2D44 /* perth.png */,
+				1A41B48215C56A47004B2D44 /* phillip_island.png */,
+				1A41B48315C56A47004B2D44 /* port_douglas.png */,
+				1A41B48415C56A47004B2D44 /* south_coast.png */,
+				1A41B48515C56A47004B2D44 /* sunshine_coast.png */,
+				1A41B48615C56A47004B2D44 /* sydney.png */,
+				1A41B48715C56A47004B2D44 /* townsville.png */,
+				1A41B48815C56A47004B2D44 /* uluru.png */,
+				1A41B48915C56A47004B2D44 /* whitsundays.png */,
+				1A41B48A15C56A47004B2D44 /* yarra_valley.png */,
+			);
+			name = locations;
+			sourceTree = "<group>";
+		};
 		1ACB9AF915C3F8710098E15A /* location */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +314,7 @@
 		1AEAE26615C388B0002E24C3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1A41B46115C56A33004B2D44 /* locations */,
 				1AEAE26E15C388EB002E24C3 /* text */,
 				1AEAE26715C388BA002E24C3 /* backgrounds */,
 			);
@@ -276,6 +407,47 @@
 				1AEAE27915C38A84002E24C3 /* 3-ipad.jpg in Resources */,
 				1AEAE27A15C38A84002E24C3 /* 4-ipad.jpg in Resources */,
 				1ACB9B1315C41CEA0098E15A /* locations.json in Resources */,
+				1A41B48B15C56A47004B2D44 /* adelaide_hills.png in Resources */,
+				1A41B48C15C56A47004B2D44 /* adelaide.png in Resources */,
+				1A41B48D15C56A47004B2D44 /* barossa_valley.png in Resources */,
+				1A41B48E15C56A47004B2D44 /* blue_mountains.png in Resources */,
+				1A41B48F15C56A47004B2D44 /* brisbane.png in Resources */,
+				1A41B49015C56A47004B2D44 /* broome.png in Resources */,
+				1A41B49115C56A47004B2D44 /* byron_bay.png in Resources */,
+				1A41B49215C56A47004B2D44 /* cairns.png in Resources */,
+				1A41B49315C56A47004B2D44 /* canberra.png in Resources */,
+				1A41B49415C56A47004B2D44 /* central_coast.png in Resources */,
+				1A41B49515C56A47004B2D44 /* cradle_mountain.png in Resources */,
+				1A41B49615C56A47004B2D44 /* darwin.png in Resources */,
+				1A41B49715C56A47004B2D44 /* daylesford.png in Resources */,
+				1A41B49815C56A47004B2D44 /* exmouth.png in Resources */,
+				1A41B49915C56A47004B2D44 /* fleurieu_peninsula.png in Resources */,
+				1A41B49A15C56A47004B2D44 /* fraser_island.png in Resources */,
+				1A41B49B15C56A47004B2D44 /* gold_coast.png in Resources */,
+				1A41B49C15C56A47004B2D44 /* great_ocean_road.png in Resources */,
+				1A41B49D15C56A47004B2D44 /* hobart.png in Resources */,
+				1A41B49E15C56A47004B2D44 /* hunter_valley.png in Resources */,
+				1A41B49F15C56A47004B2D44 /* kakadu.png in Resources */,
+				1A41B4A015C56A47004B2D44 /* kangaroo_island.png in Resources */,
+				1A41B4A115C56A47004B2D44 /* kimberley.png in Resources */,
+				1A41B4A215C56A47004B2D44 /* launceston.png in Resources */,
+				1A41B4A315C56A47004B2D44 /* lord_howe_island.png in Resources */,
+				1A41B4A415C56A47004B2D44 /* margaret_river.png in Resources */,
+				1A41B4A515C56A47004B2D44 /* melbourne.png in Resources */,
+				1A41B4A615C56A47004B2D44 /* mornington_peninsula.png in Resources */,
+				1A41B4A715C56A47004B2D44 /* ningaloo.png in Resources */,
+				1A41B4A815C56A47004B2D44 /* noosa.png in Resources */,
+				1A41B4A915C56A47004B2D44 /* north_coast.png in Resources */,
+				1A41B4AA15C56A47004B2D44 /* perth.png in Resources */,
+				1A41B4AB15C56A47004B2D44 /* phillip_island.png in Resources */,
+				1A41B4AC15C56A47004B2D44 /* port_douglas.png in Resources */,
+				1A41B4AD15C56A47004B2D44 /* south_coast.png in Resources */,
+				1A41B4AE15C56A47004B2D44 /* sunshine_coast.png in Resources */,
+				1A41B4AF15C56A47004B2D44 /* sydney.png in Resources */,
+				1A41B4B015C56A47004B2D44 /* townsville.png in Resources */,
+				1A41B4B115C56A47004B2D44 /* uluru.png in Resources */,
+				1A41B4B215C56A47004B2D44 /* whitsundays.png in Resources */,
+				1A41B4B315C56A47004B2D44 /* yarra_valley.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
