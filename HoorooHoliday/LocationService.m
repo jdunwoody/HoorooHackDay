@@ -7,23 +7,90 @@
 //
 
 #import "LocationService.h"
+#import "Location.h"
 
 @implementation LocationService
 
-
-+ (NSArray *)getJsonFromServer {
-//    NSURLRequest *request =
-//    [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://user:pass@example.com"]];
-//    
-//    [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
-//    
-    NSURL *url = [NSURL URLWithString: @"http://test+product_manager@jqdev.net:password123@hooroo.localhost:5000/extranet/locations.json"];
-
++ (NSArray *) loadLocationsFromLocalJson {
+    
     NSMutableArray *locations = [[NSMutableArray alloc] init];
     
     NSError* error;
     
-    NSData* data = [NSData dataWithContentsOfURL:url];
+    NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [thisBundle pathForResource:@"locations" ofType:@"json"];
+    
+    NSString *jsonString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    
+    if (!jsonString) {
+        NSLog(@"Error = %@", error);
+        return locations;
+    }
+    
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSArray* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    if (!json) {
+        NSLog(@"Error = %@", error);
+        return locations;
+    }
+    
+    NSLog(@"%d locations", [json count]);
+    
+//    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+//    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    for (id locationJson in json) {
+        NSNumber *x1 = [locationJson objectForKey:@"x1"];
+        NSNumber *x2 = [locationJson objectForKey:@"x2"];
+        NSNumber *y1 = [locationJson objectForKey:@"y1"];
+        NSNumber *y2 = [locationJson objectForKey:@"y2"];
+        NSString *name = [locationJson objectForKey:@"name"];
+        NSString *imageFilePath = [locationJson objectForKey:@"image_file_path"];
+        
+        NSLog(@"%@,%@,%@,%@", x1, x2, y1, y2);
+  
+        Location *location = [[Location alloc] init];
+        location.x1 = x1;
+        location.x2 = x2;
+        location.y1 = y1;
+        location.y2 = y2;
+        
+        location.title = name;
+        location.subtitle = imageFilePath;
+        [locations addObject:location];
+    }
+    
+    return locations;
+}
+
++ (NSArray *)getJsonFromServer {
+    
+    NSURLCredential *credential = [NSURLCredential credentialWithUser:@"test+product_manager@jqdev.net"
+                                                             password:@"password123"
+                                                          persistence:NSURLCredentialPersistenceForSession];
+    
+    NSURLProtectionSpace *protectionSpace = [[NSURLProtectionSpace alloc]
+                                             initWithHost:@"http://@hooroo.localhost"
+                                             port:5000
+                                             protocol:@"http"
+                                             realm:nil
+                                             authenticationMethod:nil];
+    
+    
+    [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:credential
+                                                        forProtectionSpace:protectionSpace];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://hooroo.localhost:5000/extranet/locations.json"]];
+    
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
+    
+    
+    //    NSData* data = [NSData dataWithContentsOfURL:url];
+    
+    NSMutableArray *locations = [[NSMutableArray alloc] init];
+    
+    NSError* error;
     
     NSArray* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     if (!json) {
@@ -32,6 +99,8 @@
     }
     
     for (id locationJson in json) {
+        NSLog(@"%@", locationJson);
+        
         NSNumber *x1 = [locationJson objectForKey:@"x1"];
         NSNumber *x2 = [locationJson objectForKey:@"x2"];
         NSNumber *y1 = [locationJson objectForKey:@"y2"];
@@ -44,6 +113,14 @@
 }
 
 @end
+
+
+//    NSURLRequest *request =
+//    [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://user:pass@example.com"]];
+//
+//    [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
+//
+//    NSURL *url = [NSURL URLWithString: @""];
 
 
 //        SkillTree *skillTree = [[SkillTree alloc] initWithName: name score:score date:date];

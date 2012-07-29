@@ -17,12 +17,18 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="kwp-dc-Yzq">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="704"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QbB-Dg-yX2" id="IWL-Nl-cKu"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="d5J-yS-mrp"/>
+                    <connections>
+                        <outlet property="mapView" destination="kwp-dc-Yzq" id="ztC-rh-Afh"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1062" y="-655"/>
@@ -122,7 +128,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QbB-Dg-yX2" kind="push" identifier="mapWithoutLogin" id="0vk-0v-z2V"/>
+                                    <segue destination="QbB-Dg-yX2" kind="push" identifier="mapView" id="0vk-0v-z2V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,23 +166,12 @@
         <image name="inspiration.png" width="217" height="49"/>
         <image name="logo-large-fff.png" width="490" height="214"/>
     </resources>
-    <classes>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gzS-Rj-gdF"/>
+        <segue reference="0vk-0v-z2V"/>
     </inferredMetricsTieBreakers>
 </document>

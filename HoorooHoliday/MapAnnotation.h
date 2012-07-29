@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MKAnnotation.h>
 
-@interface MapAnnotations : NSObject<MKAnnotation> {
+@interface MapAnnotation : NSObject<MKAnnotation> {
     CLLocationCoordinate2D coordinate;
     NSUInteger tag;
     NSString *title;

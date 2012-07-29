@@ -11,5 +11,6 @@
 @interface LocationService : NSObject
 
 + (NSArray *)getJsonFromServer;
++ (NSArray *) loadLocationsFromLocalJson;
 
 @end

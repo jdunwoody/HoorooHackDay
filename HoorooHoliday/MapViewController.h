@@ -10,8 +10,9 @@
 
 #import <MapKit/MKMapView.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate>
 
 @property(nonatomic,retain) IBOutlet MKMapView *mapView;
+@property(nonatomic,retain) NSMutableArray *busStopAnnotations;
 
 @end

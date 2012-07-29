@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 James Dunwoody. All rights reserved.
 //
 
-#import "MapAnnotations.h"
+#import "MapAnnotation.h"
 
-@implementation MapAnnotations
+@implementation MapAnnotation
 @synthesize coordinate;
 @synthesize tag;
 @synthesize title;

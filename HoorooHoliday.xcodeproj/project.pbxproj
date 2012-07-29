@@ -10,9 +10,11 @@
 		1A84BCCE15C3C6270024BBE5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEAE27F15C38E85002E24C3 /* MapKit.framework */; };
 		1ACB9AFD15C3F8960098E15A /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9AFC15C3F8960098E15A /* LocationService.m */; };
 		1ACB9B0115C3FF720098E15A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0015C3FF720098E15A /* LoginViewController.m */; };
-		1ACB9B0915C3FF880098E15A /* MapAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0415C3FF880098E15A /* MapAnnotations.m */; };
+		1ACB9B0915C3FF880098E15A /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0415C3FF880098E15A /* MapAnnotation.m */; };
 		1ACB9B0A15C3FF880098E15A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0615C3FF880098E15A /* MapViewController.m */; };
 		1ACB9B0B15C3FF880098E15A /* MapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0815C3FF880098E15A /* MapViewDelegate.m */; };
+		1ACB9B1315C41CEA0098E15A /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ACB9B1215C41CEA0098E15A /* locations.json */; };
+		1ACB9B1715C41E860098E15A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B1615C41E860098E15A /* Location.m */; };
 		1AEAE24A15C3873E002E24C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEAE24915C3873E002E24C3 /* UIKit.framework */; };
 		1AEAE24C15C3873E002E24C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEAE24B15C3873E002E24C3 /* Foundation.framework */; };
 		1AEAE24E15C3873E002E24C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEAE24D15C3873E002E24C3 /* CoreGraphics.framework */; };
@@ -36,12 +38,15 @@
 		1ACB9AFC15C3F8960098E15A /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
 		1ACB9AFF15C3FF720098E15A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1ACB9B0015C3FF720098E15A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		1ACB9B0315C3FF880098E15A /* MapAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotations.h; sourceTree = "<group>"; };
-		1ACB9B0415C3FF880098E15A /* MapAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotations.m; sourceTree = "<group>"; };
+		1ACB9B0315C3FF880098E15A /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		1ACB9B0415C3FF880098E15A /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		1ACB9B0515C3FF880098E15A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		1ACB9B0615C3FF880098E15A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		1ACB9B0715C3FF880098E15A /* MapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewDelegate.h; sourceTree = "<group>"; };
 		1ACB9B0815C3FF880098E15A /* MapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewDelegate.m; sourceTree = "<group>"; };
+		1ACB9B1215C41CEA0098E15A /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = locations.json; path = ../../../Desktop/locations.json; sourceTree = "<group>"; };
+		1ACB9B1515C41E860098E15A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		1ACB9B1615C41E860098E15A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		1AEAE24515C3873E002E24C3 /* HoorooHoliday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoorooHoliday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEAE24915C3873E002E24C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AEAE24B15C3873E002E24C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +90,8 @@
 			children = (
 				1ACB9AFB15C3F8960098E15A /* LocationService.h */,
 				1ACB9AFC15C3F8960098E15A /* LocationService.m */,
+				1ACB9B1515C41E860098E15A /* Location.h */,
+				1ACB9B1615C41E860098E15A /* Location.m */,
 			);
 			name = location;
 			sourceTree = "<group>";
@@ -101,8 +108,8 @@
 		1ACB9B0215C3FF7B0098E15A /* mapping */ = {
 			isa = PBXGroup;
 			children = (
-				1ACB9B0315C3FF880098E15A /* MapAnnotations.h */,
-				1ACB9B0415C3FF880098E15A /* MapAnnotations.m */,
+				1ACB9B0315C3FF880098E15A /* MapAnnotation.h */,
+				1ACB9B0415C3FF880098E15A /* MapAnnotation.m */,
 				1ACB9B0515C3FF880098E15A /* MapViewController.h */,
 				1ACB9B0615C3FF880098E15A /* MapViewController.m */,
 				1ACB9B0715C3FF880098E15A /* MapViewDelegate.h */,
@@ -111,9 +118,18 @@
 			name = mapping;
 			sourceTree = "<group>";
 		};
+		1ACB9B1415C41CF10098E15A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1ACB9B1215C41CEA0098E15A /* locations.json */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		1AEAE23A15C3873E002E24C3 = {
 			isa = PBXGroup;
 			children = (
+				1ACB9B1415C41CF10098E15A /* data */,
 				1AEAE27F15C38E85002E24C3 /* MapKit.framework */,
 				1AEAE24F15C3873E002E24C3 /* HoorooHoliday */,
 				1AEAE24815C3873E002E24C3 /* Frameworks */,
@@ -259,6 +275,7 @@
 				1AEAE27815C38A84002E24C3 /* 2-ipad.jpg in Resources */,
 				1AEAE27915C38A84002E24C3 /* 3-ipad.jpg in Resources */,
 				1AEAE27A15C38A84002E24C3 /* 4-ipad.jpg in Resources */,
+				1ACB9B1315C41CEA0098E15A /* locations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +290,10 @@
 				1AEAE25A15C3873E002E24C3 /* AppDelegate.m in Sources */,
 				1ACB9AFD15C3F8960098E15A /* LocationService.m in Sources */,
 				1ACB9B0115C3FF720098E15A /* LoginViewController.m in Sources */,
-				1ACB9B0915C3FF880098E15A /* MapAnnotations.m in Sources */,
+				1ACB9B0915C3FF880098E15A /* MapAnnotation.m in Sources */,
 				1ACB9B0A15C3FF880098E15A /* MapViewController.m in Sources */,
 				1ACB9B0B15C3FF880098E15A /* MapViewDelegate.m in Sources */,
+				1ACB9B1715C41E860098E15A /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

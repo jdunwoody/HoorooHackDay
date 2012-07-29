@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "MapViewController.h"
+#import "MapViewDelegate.h"
 
 @interface LoginViewController ()
 
@@ -30,5 +32,27 @@
 {
     return YES;
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"mapView"]) {
+//        
+//        MapViewController *mapViewController = (MapViewController *)segue.destinationViewController;
+//        
+//        MapViewDelegate *mapViewDelegate = [[MapViewDelegate alloc] initWithMapView:mapViewController.mapView];
+//        mapViewController.mapView.delegate = mapViewDelegate;
+//
+//        
+//        //        AddTypeViewController *destination = (AddTypeViewController *)segue.destinationViewController;
+//        //
+//        //        destination.addExerciseViewControllerDelegate = self;
+//        //
+//        //        //        PickerTestViewController *asker = (PickerTestViewController *) segue.destinationViewController;
+//        //        //        asker.delegate = self;
+//        //        //        asker.question = @"What do you want your label to say?";
+//        //        asker.answer = @"Label text";
+//    }
+//}
+
 
 @end
