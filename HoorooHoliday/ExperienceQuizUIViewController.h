@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "quiz.h"
 
-@interface ExperienceQuizUIViewController : UIViewController
+@interface ExperienceQuizUIViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *quizTitle;
+@property (weak, nonatomic) IBOutlet UILabel *subtitle;
+@property (weak, nonatomic) IBOutlet UIView *questionContainer;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) Quiz *quiz;
 
 @end

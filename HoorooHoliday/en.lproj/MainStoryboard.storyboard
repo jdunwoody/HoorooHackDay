@@ -102,6 +102,15 @@
                     <view key="view" contentMode="scaleToFill" id="0VC-SC-geC">
                         <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="yrU-ep-UnI">
+                                <rect key="frame" x="524" y="355" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -110,18 +119,75 @@
             </objects>
             <point key="canvasLocation" x="2468" y="-1127"/>
         </scene>
-        <!--Experience-->
+        <!--Experience QuizUI View Controller-->
         <scene sceneID="3o3-fN-qjR">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yX6-CN-Rgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="hKd-ef-Yiq" customClass="Experience" sceneMemberID="viewController">
+                <viewController id="hKd-ef-Yiq" customClass="ExperienceQuizUIViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WHt-fR-ArL">
                         <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="2-ipad.jpg" id="aT8-cg-aMT">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="704"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QeS-6i-DdV">
+                                <rect key="frame" x="137" y="45" width="447" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="MNo-Fw-maT">
+                                <rect key="frame" x="137" y="130" width="419" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="112" sectionHeaderHeight="22" sectionFooterHeight="22" id="VPp-L2-p19">
+                                <rect key="frame" x="137" y="199" width="784" height="446"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="QuestionCell" editingAccessoryType="disclosureIndicator" rowHeight="112" id="KWB-sn-iXT" customClass="QuestionCell">
+                                        <rect key="frame" x="0.0" y="22" width="784" height="112"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="764" height="111"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="M2M-Jd-VAU">
+                                                    <rect key="frame" x="31" y="11" width="705" height="85"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="text" destination="M2M-Jd-VAU" id="6O4-Ei-vgN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hKd-ef-Yiq" id="Fgu-xI-L13"/>
+                                    <outlet property="delegate" destination="hKd-ef-Yiq" id="PND-jz-Bc4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="yhh-GJ-vEq"/>
+                    <connections>
+                        <outlet property="quizTitle" destination="QeS-6i-DdV" id="Cbi-fR-GEV"/>
+                        <outlet property="subtitle" destination="MNo-Fw-maT" id="ztr-4Z-0yT"/>
+                        <outlet property="tableView" destination="VPp-L2-p19" id="Mjh-6Q-Bq1"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2468" y="-274"/>
@@ -255,12 +321,42 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2-ipad.jpg" width="1378" height="900"/>
         <image name="adelaide.png" width="224" height="288"/>
         <image name="adelaide_hills.png" width="224" height="288"/>
         <image name="bg-4.jpg" width="1600" height="800"/>
         <image name="inspiration.png" width="217" height="49"/>
         <image name="logo-large-fff.png" width="490" height="214"/>
     </resources>
+    <classes>
+        <class className="ExperienceQuizUIViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExperienceQuizUIViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="questionContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="quizTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="subtitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="KnowledgeQuizUiViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KnowledgeQuizUiViewController.h"/>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="QuestionCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuestionCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="text" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

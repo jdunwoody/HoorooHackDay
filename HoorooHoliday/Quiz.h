@@ -11,8 +11,8 @@
 
 @interface Quiz : NSObject
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *subTitle;
-@property (nonatomic, strong) NSMutableArray *questions;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *subTitle;
+@property (strong, nonatomic) NSMutableArray *questions;
 
 @end

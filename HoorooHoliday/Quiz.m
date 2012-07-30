@@ -12,5 +12,12 @@
 
 @synthesize title, subTitle, questions;
 
+- (id) init
+{
+    if (self = [super init]) {
+        self.questions = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 @end
 

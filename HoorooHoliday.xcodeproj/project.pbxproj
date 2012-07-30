@@ -54,6 +54,7 @@
 		1AA6E97615C60FD2009B2630 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E97515C60FD2009B2630 /* Quiz.m */; };
 		1AA6E97915C61065009B2630 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E97815C61065009B2630 /* Question.m */; };
 		1AA6E97C15C610AF009B2630 /* QuizService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E97B15C610AF009B2630 /* QuizService.m */; };
+		1AA6E98315C6390F009B2630 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E98215C6390F009B2630 /* QuestionCell.m */; };
 		1ACB9AFD15C3F8960098E15A /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9AFC15C3F8960098E15A /* LocationService.m */; };
 		1ACB9B0115C3FF720098E15A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0015C3FF720098E15A /* LoginViewController.m */; };
 		1ACB9B0915C3FF880098E15A /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0415C3FF880098E15A /* MapAnnotation.m */; };
@@ -131,6 +132,8 @@
 		1AA6E97815C61065009B2630 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		1AA6E97A15C610AF009B2630 /* QuizService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizService.h; sourceTree = "<group>"; };
 		1AA6E97B15C610AF009B2630 /* QuizService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizService.m; sourceTree = "<group>"; };
+		1AA6E98115C6390E009B2630 /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		1AA6E98215C6390F009B2630 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
 		1ACB9AFB15C3F8960098E15A /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		1ACB9AFC15C3F8960098E15A /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
 		1ACB9AFF15C3FF720098E15A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				1AA6E97815C61065009B2630 /* Question.m */,
 				1AA6E97A15C610AF009B2630 /* QuizService.h */,
 				1AA6E97B15C610AF009B2630 /* QuizService.m */,
+				1AA6E98115C6390E009B2630 /* QuestionCell.h */,
+				1AA6E98215C6390F009B2630 /* QuestionCell.m */,
 			);
 			name = quiz;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				1AA6E97615C60FD2009B2630 /* Quiz.m in Sources */,
 				1AA6E97915C61065009B2630 /* Question.m in Sources */,
 				1AA6E97C15C610AF009B2630 /* QuizService.m in Sources */,
+				1AA6E98315C6390F009B2630 /* QuestionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
