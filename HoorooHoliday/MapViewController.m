@@ -74,6 +74,7 @@
     //add annotations array to the mapView
     [mapView addAnnotations:self.busStopAnnotations];
     
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

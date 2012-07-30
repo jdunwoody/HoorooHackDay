@@ -48,7 +48,12 @@
 		1A41B4B115C56A47004B2D44 /* uluru.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48815C56A47004B2D44 /* uluru.png */; };
 		1A41B4B215C56A47004B2D44 /* whitsundays.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48915C56A47004B2D44 /* whitsundays.png */; };
 		1A41B4B315C56A47004B2D44 /* yarra_valley.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41B48A15C56A47004B2D44 /* yarra_valley.png */; };
+		1A41B4B715C56C4B004B2D44 /* KnowledgeQuizUiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41B4B615C56C4B004B2D44 /* KnowledgeQuizUiViewController.m */; };
 		1A84BCCE15C3C6270024BBE5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEAE27F15C38E85002E24C3 /* MapKit.framework */; };
+		1AA6E97315C60DD7009B2630 /* ExperienceQuizUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E97215C60DD7009B2630 /* ExperienceQuizUIViewController.m */; };
+		1AA6E97615C60FD2009B2630 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E97515C60FD2009B2630 /* Quiz.m */; };
+		1AA6E97915C61065009B2630 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E97815C61065009B2630 /* Question.m */; };
+		1AA6E97C15C610AF009B2630 /* QuizService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA6E97B15C610AF009B2630 /* QuizService.m */; };
 		1ACB9AFD15C3F8960098E15A /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9AFC15C3F8960098E15A /* LocationService.m */; };
 		1ACB9B0115C3FF720098E15A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0015C3FF720098E15A /* LoginViewController.m */; };
 		1ACB9B0915C3FF880098E15A /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0415C3FF880098E15A /* MapAnnotation.m */; };
@@ -116,6 +121,16 @@
 		1A41B48815C56A47004B2D44 /* uluru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uluru.png; sourceTree = "<group>"; };
 		1A41B48915C56A47004B2D44 /* whitsundays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitsundays.png; sourceTree = "<group>"; };
 		1A41B48A15C56A47004B2D44 /* yarra_valley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yarra_valley.png; sourceTree = "<group>"; };
+		1A41B4B515C56C4B004B2D44 /* KnowledgeQuizUiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeQuizUiViewController.h; sourceTree = "<group>"; };
+		1A41B4B615C56C4B004B2D44 /* KnowledgeQuizUiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeQuizUiViewController.m; sourceTree = "<group>"; };
+		1AA6E97115C60DD7009B2630 /* ExperienceQuizUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceQuizUIViewController.h; sourceTree = "<group>"; };
+		1AA6E97215C60DD7009B2630 /* ExperienceQuizUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceQuizUIViewController.m; sourceTree = "<group>"; };
+		1AA6E97415C60FD2009B2630 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		1AA6E97515C60FD2009B2630 /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		1AA6E97715C61065009B2630 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		1AA6E97815C61065009B2630 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		1AA6E97A15C610AF009B2630 /* QuizService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizService.h; sourceTree = "<group>"; };
+		1AA6E97B15C610AF009B2630 /* QuizService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizService.m; sourceTree = "<group>"; };
 		1ACB9AFB15C3F8960098E15A /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		1ACB9AFC15C3F8960098E15A /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
 		1ACB9AFF15C3FF720098E15A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -215,6 +230,39 @@
 			name = locations;
 			sourceTree = "<group>";
 		};
+		1A41B4B415C56BDA004B2D44 /* quiz */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6E97015C60D4A009B2630 /* knowledge */,
+				1AA6E96E15C60D3D009B2630 /* experience */,
+				1AA6E97415C60FD2009B2630 /* Quiz.h */,
+				1AA6E97515C60FD2009B2630 /* Quiz.m */,
+				1AA6E97715C61065009B2630 /* Question.h */,
+				1AA6E97815C61065009B2630 /* Question.m */,
+				1AA6E97A15C610AF009B2630 /* QuizService.h */,
+				1AA6E97B15C610AF009B2630 /* QuizService.m */,
+			);
+			name = quiz;
+			sourceTree = "<group>";
+		};
+		1AA6E96E15C60D3D009B2630 /* experience */ = {
+			isa = PBXGroup;
+			children = (
+				1AA6E97115C60DD7009B2630 /* ExperienceQuizUIViewController.h */,
+				1AA6E97215C60DD7009B2630 /* ExperienceQuizUIViewController.m */,
+			);
+			name = experience;
+			sourceTree = "<group>";
+		};
+		1AA6E97015C60D4A009B2630 /* knowledge */ = {
+			isa = PBXGroup;
+			children = (
+				1A41B4B515C56C4B004B2D44 /* KnowledgeQuizUiViewController.h */,
+				1A41B4B615C56C4B004B2D44 /* KnowledgeQuizUiViewController.m */,
+			);
+			name = knowledge;
+			sourceTree = "<group>";
+		};
 		1ACB9AF915C3F8710098E15A /* location */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +336,7 @@
 		1AEAE24F15C3873E002E24C3 /* HoorooHoliday */ = {
 			isa = PBXGroup;
 			children = (
+				1A41B4B415C56BDA004B2D44 /* quiz */,
 				1ACB9B0215C3FF7B0098E15A /* mapping */,
 				1ACB9AFE15C3FF5D0098E15A /* login */,
 				1ACB9AF915C3F8710098E15A /* location */,
@@ -466,6 +515,11 @@
 				1ACB9B0A15C3FF880098E15A /* MapViewController.m in Sources */,
 				1ACB9B0B15C3FF880098E15A /* MapViewDelegate.m in Sources */,
 				1ACB9B1715C41E860098E15A /* Location.m in Sources */,
+				1A41B4B715C56C4B004B2D44 /* KnowledgeQuizUiViewController.m in Sources */,
+				1AA6E97315C60DD7009B2630 /* ExperienceQuizUIViewController.m in Sources */,
+				1AA6E97615C60FD2009B2630 /* Quiz.m in Sources */,
+				1AA6E97915C61065009B2630 /* Question.m in Sources */,
+				1AA6E97C15C610AF009B2630 /* QuizService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
