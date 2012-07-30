@@ -11,6 +11,6 @@
 @interface Question : NSObject
 
 @property (strong, nonatomic) NSString *text;
-@property (nonatomic) BOOL answeredYes;
+@property (nonatomic, assign, getter=isAnswered) BOOL answered;
 
 @end

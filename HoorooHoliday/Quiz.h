@@ -15,4 +15,6 @@
 @property (strong, nonatomic) NSString *subTitle;
 @property (strong, nonatomic) NSMutableArray *questions;
 
+- (int) total;
+
 @end

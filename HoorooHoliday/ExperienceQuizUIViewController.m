@@ -18,6 +18,7 @@
 @synthesize tableView;
 @synthesize title;
 @synthesize quiz;
+@synthesize total;
 
 - (void) viewDidLoad
 {
@@ -59,6 +60,8 @@
 //    }
 //    font = nil;
     
+    [self updateTotal];
+    
     [super viewDidLoad];
 }
 
@@ -68,6 +71,7 @@
     [self setSubtitle:nil];
     [self setQuestionContainer:nil];
     [self setTableView:nil];
+    [self setTotal:nil];
     [super viewDidUnload];
 }
 
@@ -94,7 +98,7 @@
     QuestionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     cell.question = question;
     
-    if (cell.question.answeredYes) {
+    if (cell.question.isAnswered) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -104,20 +108,22 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-    Question *question = [self.quiz.questions objectAtIndex:indexPath.row];
-    
-}
+//- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+//{
+//    Question *question = [self.quiz.questions objectAtIndex:indexPath.row];
+//    
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     QuestionCell *cell = [self getCellFromIndexPath:indexPath];
     
-    cell.accessoryType = cell.question.answeredYes ? UITableViewCellAccessoryNone : UITableViewCellAccessoryCheckmark;
-    cell.question.answeredYes = !cell.question.answeredYes;
+    cell.question.answered = cell.question.isAnswered ? NO : YES;
+    cell.accessoryType = cell.question.answered ? UITableViewCellAccessoryNone : UITableViewCellAccessoryCheckmark;
         
     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation: YES];
+    
+    [self updateTotal];
     
     
 //    BATTrailsViewController *trailsController = [[BATTrailsViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -126,14 +132,20 @@
 //    [trailsController release];
 }
 
+- (void) updateTotal
+{
+    self.total.text = [NSString stringWithFormat:@"%d/%d", self.quiz.total, self.quiz.questions.count];
+}
+
 - (QuestionCell *) getCellFromIndexPath: (NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    Question *question = [self.quiz.questions objectAtIndex:indexPath.row];
+    Question *question = [self.quiz.questions objectAtIndex:indexPath.row];
     
     static NSString *CellIdentifier = @"QuestionCell";
     QuestionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.question = question;
     return cell;
 }
 

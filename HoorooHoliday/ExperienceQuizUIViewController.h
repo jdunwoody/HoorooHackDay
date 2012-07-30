@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIView *questionContainer;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) Quiz *quiz;
+@property (weak, nonatomic) IBOutlet UILabel *total;
 
 @end

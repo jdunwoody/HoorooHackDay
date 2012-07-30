@@ -178,6 +178,13 @@
                                     <outlet property="delegate" destination="hKd-ef-Yiq" id="PND-jz-Bc4"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="s1J-Tk-LvX">
+                                <rect key="frame" x="704" y="65" width="207" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -187,6 +194,7 @@
                         <outlet property="quizTitle" destination="QeS-6i-DdV" id="Cbi-fR-GEV"/>
                         <outlet property="subtitle" destination="MNo-Fw-maT" id="ztr-4Z-0yT"/>
                         <outlet property="tableView" destination="VPp-L2-p19" id="Mjh-6Q-Bq1"/>
+                        <outlet property="total" destination="s1J-Tk-LvX" id="yWp-Pk-N7b"/>
                     </connections>
                 </viewController>
             </objects>
@@ -328,35 +336,6 @@
         <image name="inspiration.png" width="217" height="49"/>
         <image name="logo-large-fff.png" width="490" height="214"/>
     </resources>
-    <classes>
-        <class className="ExperienceQuizUIViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExperienceQuizUIViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="questionContainer" candidateClass="UIView"/>
-                <relationship kind="outlet" name="quizTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="subtitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="KnowledgeQuizUiViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/KnowledgeQuizUiViewController.h"/>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="QuestionCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuestionCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="text" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

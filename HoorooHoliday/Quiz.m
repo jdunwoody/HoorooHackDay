@@ -19,5 +19,18 @@
     }
     return self;
 }
+
+- (int) total
+{
+    int total = 0;
+    for(Question *question in questions) {
+        if (question.answered) {
+            total++;
+        }
+    }
+    
+    return total;
+}
+
 @end
 

@@ -10,6 +10,16 @@
 
 @implementation Question
 
-@synthesize text, answeredYes;
+@synthesize text;
+@synthesize answered = _answered;
+
+- (id) init
+{
+    if (self = [super init]) {
+        self.answered = NO;
+    }
+    
+    return self;
+}
 
 @end
