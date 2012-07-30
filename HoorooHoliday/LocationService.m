@@ -37,8 +37,8 @@
     
     NSLog(@"%d locations", [json count]);
     
-//    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-//    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    //    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    //    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
     
     for (id locationJson in json) {
         NSNumber *x1 = [locationJson objectForKey:@"x1"];
@@ -46,10 +46,19 @@
         NSNumber *y1 = [locationJson objectForKey:@"y1"];
         NSNumber *y2 = [locationJson objectForKey:@"y2"];
         NSString *name = [locationJson objectForKey:@"name"];
-        NSString *imageFilePath = [locationJson objectForKey:@"image_file_path"];
+        
+        NSString *path = [locationJson objectForKey:@"image_file_path"];
+        
+        NSArray *imageFilePath;
+        if (path == (id)[NSNull null] || path.length == 0) {
+            imageFilePath = [[NSArray alloc] init];
+        } else {
+            imageFilePath = [path componentsSeparatedByString: @"/"];
+        }
+        //        NSArray* foo = [@"10/04/2011" componentsSeparatedByString: @"/"];
         
         NSLog(@"%@,%@,%@,%@", x1, x2, y1, y2);
-  
+        
         Location *location = [[Location alloc] init];
         location.x1 = x1;
         location.x2 = x2;
@@ -57,8 +66,11 @@
         location.y2 = y2;
         
         location.title = name;
-        location.subtitle = imageFilePath;
-        [locations addObject:location];
+        location.imageFilePath = [imageFilePath lastObject];
+        
+        if (location.imageFilePath != (id)[NSNull null] && location.imageFilePath.length > 0) {
+            [locations addObject:location];
+        }
     }
     
     return locations;

@@ -11,7 +11,7 @@
 @implementation Location
 
 @synthesize x1, x2, y1, y2;
-@synthesize title, subtitle;
+@synthesize title, imageFilePath;
 //- (id) initWithX1: x1 withX2: x2 withY1: y1 withY2: y2
 //{
 //    

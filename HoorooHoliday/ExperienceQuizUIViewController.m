@@ -149,4 +149,7 @@
     return cell;
 }
 
+- (IBAction)finishedWithQuiz:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

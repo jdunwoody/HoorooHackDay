@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MKAnnotation.h>
+#import "Location.h"
 
 @interface MapAnnotation : NSObject<MKAnnotation> {
     CLLocationCoordinate2D coordinate;
@@ -20,8 +21,8 @@
 @property(nonatomic) NSUInteger tag;
 @property (nonatomic, readonly, copy) NSString *title;
 @property (nonatomic, readonly, copy) NSString *subtitle;
+@property (strong, nonatomic) Location *location;
 
+-(id)initWithCoordinate:(CLLocationCoordinate2D)c withTag:(NSUInteger)t withTitle:(NSString *)tl withSubtitle:(NSString *)s;
 
-//programmer provided init function to create the annotation objects
--(id)initWithCoordinate:(CLLocationCoordinate2D)c withTag:(NSUInteger)t withTitle:(NSString *)tl withSubtitle:	(NSString *)s;
 @end

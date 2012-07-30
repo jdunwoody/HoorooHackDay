@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) Quiz *quiz;
 @property (weak, nonatomic) IBOutlet UILabel *total;
+- (IBAction)finishedWithQuiz:(id)sender;
 
 @end

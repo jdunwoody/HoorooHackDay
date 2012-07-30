@@ -14,5 +14,8 @@
 
 @property(nonatomic,retain) IBOutlet MKMapView *mapView;
 @property(nonatomic,retain) NSMutableArray *busStopAnnotations;
+@property(strong, nonatomic) NSArray *locations;
+@property (weak, nonatomic) IBOutlet UIScrollView *chosenDestinations;
+@property(strong, nonatomic) NSMutableArray *chosenLocations;
 
 @end

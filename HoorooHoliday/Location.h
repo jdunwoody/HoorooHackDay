@@ -13,5 +13,5 @@
 //- (id) initWithX1: x1 withX2: x2 withY1: y1 withY2: y2;
 
 @property(nonatomic,retain) NSNumber *x1, *x2, *y1, *y2;
-@property(nonatomic,retain) NSString *title, *subtitle;
+@property(nonatomic,retain) NSString *title, *imageFilePath;
 @end

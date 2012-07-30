@@ -13,8 +13,8 @@
 @synthesize tag;
 @synthesize title;
 @synthesize subtitle;
-
--(id)initWithCoordinate:(CLLocationCoordinate2D)c withTag:(NSUInteger)t withTitle:(NSString *)tl withSubtitle:	(NSString *)s
+@synthesize location;
+-(id)initWithCoordinate:(CLLocationCoordinate2D)c withTag:(NSUInteger)t withTitle:(NSString *)tl withSubtitle: (NSString *)s
 {
 	if(self = [super init])
 	{
