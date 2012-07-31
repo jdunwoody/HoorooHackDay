@@ -11,6 +11,7 @@
 #import "Quiz.h"
 #import "QuestionCell.h"
 #import "MapViewController.h"
+#import "ResultsUIViewController.h"
 
 @implementation ExperienceQuizUIViewController
 @synthesize quizLocationImage;
@@ -31,7 +32,7 @@
     self.title = @"How much do you know?";
     self.quiz = [self.quizes objectAtIndex: [self.quizNumber integerValue]];
     
-    self.quizTitle.text = quiz.title;
+    self.quizTitle.text = [NSString stringWithFormat:@"How much do you know about %@", quiz.location.title];
     self.subtitle.text = quiz.subTitle;
     
     UIImage *image = [UIImage imageNamed:self.quiz.location.imageFilePath];
@@ -202,6 +203,10 @@
             nextQuizViewController.quizes = self.quizes;
             nextQuizViewController.quizNumber = [NSNumber numberWithInt:[self nextQuizNumber]];
         }
+    } else if ([[segue identifier] isEqualToString:@"finishedWithQuiz"]) {
+        ResultsUIViewController *results = (ResultsUIViewController *)segue.destinationViewController;
+        
+        results.location = [[self.quizes objectAtIndex:0] location];
     }
 }
 

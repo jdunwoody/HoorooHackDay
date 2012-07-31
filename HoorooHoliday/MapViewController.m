@@ -73,7 +73,6 @@
     CLLocationCoordinate2D annotationCenter;
     MapAnnotation *annotation;
     
-    
     for(Location *location in allLocations) {
         
         annotationCenter.latitude = [location.x1 doubleValue];
@@ -207,6 +206,7 @@
         
         quizViewController.quizes = [QuizService loadWithLocations: self.chosenLocations];
         quizViewController.quizNumber = [NSNumber numberWithInt:0];
+        
     }
 }
 

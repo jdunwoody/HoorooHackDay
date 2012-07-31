@@ -15,6 +15,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [((UINavigationController *)self.window.rootViewController) setNavigationBarHidden:YES];
+    
 //    LoginViewController *loginViewController = (LoginViewController *)self.window.rootViewController;
     
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
