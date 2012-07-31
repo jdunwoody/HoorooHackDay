@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *searchHotelsButton;
 @property (weak, nonatomic) IBOutlet UIImageView *getInspiredButton;
 @property (weak, nonatomic) IBOutlet UIImageView *locationImageView;
+- (IBAction)searchHotels:(id)sender;
+- (IBAction)getInspired:(id)sender;
 
 @end

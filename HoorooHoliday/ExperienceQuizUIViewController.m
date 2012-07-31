@@ -33,7 +33,15 @@
     self.quiz = [self.quizes objectAtIndex: [self.quizNumber integerValue]];
     
     self.quizTitle.text = [NSString stringWithFormat:@"How much do you know about %@", quiz.location.title];
+    self.quizTitle.minimumFontSize = 32.;
+    self.quizTitle.adjustsFontSizeToFitWidth = YES;
+    self.quizTitle.numberOfLines = 0;
+
     self.subtitle.text = quiz.subTitle;
+    self.subtitle.minimumFontSize = 22.;
+    self.subtitle.adjustsFontSizeToFitWidth = YES;
+    self.subtitle.numberOfLines = 0;
+
     
     UIImage *image = [UIImage imageNamed:self.quiz.location.imageFilePath];
     

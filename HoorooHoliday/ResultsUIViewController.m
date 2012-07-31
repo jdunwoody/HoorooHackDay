@@ -43,4 +43,14 @@
     [self setLocationImageView:nil];
     [super viewDidUnload];
 }
+- (IBAction)searchHotels:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://hooroo.com/search"];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+- (IBAction)getInspired:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://hooroo.com/inspire"];
+    [[UIApplication sharedApplication] openURL:url];
+
+}
 @end

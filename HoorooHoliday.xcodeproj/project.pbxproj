@@ -64,6 +64,7 @@
 		1ABE0C8B15C7927800B6D377 /* confirmation-stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0C8A15C7927800B6D377 /* confirmation-stamp.png */; };
 		1ABE0C8E15C797DA00B6D377 /* header_inspired.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0C8C15C797DA00B6D377 /* header_inspired.gif */; };
 		1ABE0C8F15C797DA00B6D377 /* header_search.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0C8D15C797DA00B6D377 /* header_search.gif */; };
+		1ABE0D4515C7A07400B6D377 /* question.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABE0D4415C7A07400B6D377 /* question.png */; };
 		1ACB9AFD15C3F8960098E15A /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9AFC15C3F8960098E15A /* LocationService.m */; };
 		1ACB9B0115C3FF720098E15A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0015C3FF720098E15A /* LoginViewController.m */; };
 		1ACB9B0915C3FF880098E15A /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB9B0415C3FF880098E15A /* MapAnnotation.m */; };
@@ -153,6 +154,7 @@
 		1ABE0C8A15C7927800B6D377 /* confirmation-stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "confirmation-stamp.png"; path = "../../../../work/jetstar/newco/app/assets/images/quagmire/skin/hooroo/confirmation-stamp.png"; sourceTree = "<group>"; };
 		1ABE0C8C15C797DA00B6D377 /* header_inspired.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = header_inspired.gif; path = HoorooHoliday/header_inspired.gif; sourceTree = "<group>"; };
 		1ABE0C8D15C797DA00B6D377 /* header_search.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = header_search.gif; path = HoorooHoliday/header_search.gif; sourceTree = "<group>"; };
+		1ABE0D4415C7A07400B6D377 /* question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = question.png; path = HoorooHoliday/question.png; sourceTree = "<group>"; };
 		1ACB9AFB15C3F8960098E15A /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
 		1ACB9AFC15C3F8960098E15A /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
 		1ACB9AFF15C3FF720098E15A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 		1AEAE23A15C3873E002E24C3 = {
 			isa = PBXGroup;
 			children = (
+				1ABE0D4415C7A07400B6D377 /* question.png */,
 				1ABE0C8C15C797DA00B6D377 /* header_inspired.gif */,
 				1ABE0C8D15C797DA00B6D377 /* header_search.gif */,
 				1ABE0C8815C7919800B6D377 /* app_icon@2x.png */,
@@ -539,6 +542,7 @@
 				1ABE0C8B15C7927800B6D377 /* confirmation-stamp.png in Resources */,
 				1ABE0C8E15C797DA00B6D377 /* header_inspired.gif in Resources */,
 				1ABE0C8F15C797DA00B6D377 /* header_search.gif in Resources */,
+				1ABE0D4515C7A07400B6D377 /* question.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
