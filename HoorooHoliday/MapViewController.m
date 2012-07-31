@@ -13,15 +13,18 @@
 #import "MapAnnotation.h"
 #import "LocationService.h"
 #import <MapKit/MKAnnotation.h>
+#import "ExperienceQuizUIViewController.h"
+#import "QuizService.h"
 
 @interface MapViewController ()
 
 @end
 
 @implementation MapViewController
-@synthesize chosenDestinations;
+@synthesize quizButton;
+@synthesize chosenLocationsView;
 
-@synthesize mapView, locations, chosenLocations;
+@synthesize mapView, allLocations, chosenLocations;
 
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 //{
@@ -34,12 +37,12 @@
 
 - (void)viewDidLoad
 {
-    self.locations = [[NSMutableArray alloc] init];
+    self.allLocations = [[NSMutableArray alloc] init];
     self.chosenLocations = [[NSMutableArray alloc] init];
     
     CLLocationCoordinate2D center;
     center.latitude = -25.373809;
-    center.longitude =131.053161;
+    center.longitude = 131.053161;
     
     //declare span of map (height and width in degrees)
     MKCoordinateSpan span;
@@ -56,15 +59,15 @@
     
     //create annotations and add to the busStopAnnotations array
     NSMutableArray *myArray = [[NSMutableArray alloc] init];
-    self.busStopAnnotations = myArray;
+    self.annotations = myArray;
     
     NSUInteger tag = 1;
     CLLocationCoordinate2D annotationCenter;
     MapAnnotation *annotation;
     
-    self.locations = [LocationService loadLocationsFromLocalJson];
+    self.allLocations = [LocationService loadLocationsFromLocalJson];
     
-    for(Location *location in locations) {
+    for(Location *location in allLocations) {
         
         annotationCenter.latitude = [location.x1 doubleValue];
         annotationCenter.longitude =  [location.y1 doubleValue];
@@ -72,13 +75,13 @@
         annotation = [[MapAnnotation alloc] initWithCoordinate:annotationCenter withTag:tag withTitle:location.title withSubtitle:location.imageFilePath];
         annotation.location = location;
         
-        [self.busStopAnnotations addObject:annotation];
+        [self.annotations addObject:annotation];
         
         tag++;
     }
     
     //add annotations array to the mapView
-    [mapView addAnnotations:self.busStopAnnotations];
+    [mapView addAnnotations:self.annotations];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -86,7 +89,8 @@
 
 - (void)viewDidUnload
 {
-    [self setChosenDestinations:nil];
+    [self setChosenLocationsView:nil];
+    [self setQuizButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -137,7 +141,7 @@
 {
     MapAnnotation *annotation = view.annotation;
     //    NSString *temp = annotation.title;
-    
+    [self addedLocation];
     [self.chosenLocations addObject:annotation.location];
     
     int numberOfImages = [self.chosenLocations count];
@@ -150,7 +154,7 @@
     
     if (annotation.location.imageFilePath != (id)[NSNull null] &&  annotation.location.imageFilePath.length > 0) {
         UIImage *image = [UIImage imageNamed:annotation.location.imageFilePath];
-    
+        
         int width = 224;
         int height = 228;
         
@@ -159,18 +163,28 @@
         int y = 0;
         
         imgView.frame = CGRectMake(x, y, width, height);
-        [self.chosenDestinations addSubview:imgView];
-        self.chosenDestinations.contentSize = CGSizeMake(width * numberOfImages, height);
+        [self.chosenLocationsView addSubview:imgView];
+        self.chosenLocationsView.contentSize = CGSizeMake(width * numberOfImages, height);
         
         
-        CGPoint rightOffset = CGPointMake([self.chosenDestinations contentSize].width - self.chosenDestinations.frame.size.width, 0);
+        CGPoint rightOffset = CGPointMake([self.chosenLocationsView contentSize].width - self.chosenLocationsView.frame.size.width, 0);
         
-//        CGPoint rightOffset = CGPointMake(self.chosenDestinations.bounds.size.width - self.chosenDestinations.contentSize.width, 0);
-        [self.chosenDestinations setContentOffset:rightOffset animated:YES];
+        //        CGPoint rightOffset = CGPointMake(self.chosenDestinations.bounds.size.width - self.chosenDestinations.contentSize.width, 0);
+        [self.chosenLocationsView setContentOffset:rightOffset animated:YES];
         
         image = nil;
         imgView = nil;
     }
+}
+
+- (void) addedLocation
+{
+    [self enableQuizButtons];
+}
+
+- (void) enableQuizButtons
+{
+    self.quizButton.enabled = YES;
 }
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
@@ -178,18 +192,15 @@
     
 }
 
-//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"mapView"]) {
-//        AddTypeViewController *destination = (AddTypeViewController *)segue.destinationViewController;
-//
-//        destination.addExerciseViewControllerDelegate = self;
-//
-//        //        PickerTestViewController *asker = (PickerTestViewController *) segue.destinationViewController;
-//        //        asker.delegate = self;
-//        //        asker.question = @"What do you want your label to say?";
-//        asker.answer = @"Label text";
-//    }
-//}
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"quiz"]) {
+        ExperienceQuizUIViewController *quizViewController = (ExperienceQuizUIViewController *)segue.destinationViewController;
+        
+        quizViewController.quizes = [QuizService loadWithLocations: self.chosenLocations];
+        quizViewController.quizNumber = [NSNumber numberWithInt:0];
+    }
+}
+
 
 @end

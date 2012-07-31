@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Question.h"
+#import "Location.h"
 
 @interface Quiz : NSObject
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *subTitle;
 @property (strong, nonatomic) NSMutableArray *questions;
+@property (strong, nonatomic) Location *location;
+
 
 - (int) total;
 

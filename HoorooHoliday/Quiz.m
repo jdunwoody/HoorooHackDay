@@ -7,10 +7,11 @@
 //
 
 #import "Quiz.h"
+#import "Location.h"
 
 @implementation Quiz
 
-@synthesize title, subTitle, questions;
+@synthesize title, subTitle, questions, location;
 
 - (id) init
 {

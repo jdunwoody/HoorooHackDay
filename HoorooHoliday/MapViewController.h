@@ -13,9 +13,10 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
 @property(nonatomic,retain) IBOutlet MKMapView *mapView;
-@property(nonatomic,retain) NSMutableArray *busStopAnnotations;
-@property(strong, nonatomic) NSArray *locations;
-@property (weak, nonatomic) IBOutlet UIScrollView *chosenDestinations;
+@property(nonatomic,retain) NSMutableArray *annotations;
+@property(strong, nonatomic) NSArray *allLocations;
+@property (weak, nonatomic) IBOutlet UIScrollView *chosenLocationsView;
 @property(strong, nonatomic) NSMutableArray *chosenLocations;
+@property (weak, nonatomic) IBOutlet UIButton *quizButton;
 
 @end

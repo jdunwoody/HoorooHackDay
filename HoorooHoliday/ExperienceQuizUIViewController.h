@@ -14,8 +14,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *subtitle;
 @property (weak, nonatomic) IBOutlet UIView *questionContainer;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) Quiz *quiz;
 @property (weak, nonatomic) IBOutlet UILabel *total;
+
+@property (strong, nonatomic) Quiz *quiz;
+@property (strong, nonatomic) NSArray *locations;
+@property (strong, nonatomic) NSArray *quizes;
+@property (strong, nonatomic) NSNumber *quizNumber;
+@property (weak, nonatomic) IBOutlet UIImageView *quizLocationImage;
+@property (weak, nonatomic) IBOutlet UIButton *nextQuizButton;
+
 - (IBAction)finishedWithQuiz:(id)sender;
 
 @end

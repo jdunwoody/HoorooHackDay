@@ -21,7 +21,7 @@
 		coordinate = c;
 		tag = t;
 		title = tl;
-		subtitle = s == (id)[NSNull null] ? @"" : s;
+//		subtitle = s == (id)[NSNull null] ? @"" : s;
         NSLog(@"%f %f %u %@ %@", coordinate.latitude , coordinate.longitude, tag, title, subtitle);
 	}
 	return self;

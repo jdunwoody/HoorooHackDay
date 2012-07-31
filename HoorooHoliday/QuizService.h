@@ -11,6 +11,6 @@
 
 @interface QuizService : NSObject
 
-+ (Quiz *) load;
++ (NSArray *) loadWithLocations: (NSArray *)locations;
 
 @end
