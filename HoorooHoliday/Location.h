@@ -14,4 +14,5 @@
 
 @property(nonatomic,retain) NSNumber *x1, *x2, *y1, *y2;
 @property(nonatomic,retain) NSString *title, *imageFilePath;
+
 @end

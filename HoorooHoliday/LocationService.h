@@ -10,7 +10,8 @@
 
 @interface LocationService : NSObject
 
-+ (NSArray *)getJsonFromServer;
+//+ (NSArray *)getJsonFromServer;
 + (NSArray *) loadLocationsFromLocalJson;
++ (NSArray *) loadLocationsFromBooking: (NSString *) bookingId;
 
 @end

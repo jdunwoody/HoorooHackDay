@@ -76,80 +76,68 @@
     return locations;
 }
 
-+ (NSArray *)getJsonFromServer {
++ (NSArray *) loadLocationsFromBooking: (NSString *) bookingId
+{
+    NSArray *allLocations = [self loadLocationsFromLocalJson];
+
+    NSArray *halfArray;
+    NSRange theRange;
     
-    NSURLCredential *credential = [NSURLCredential credentialWithUser:@"test+product_manager@jqdev.net"
-                                                             password:@"password123"
-                                                          persistence:NSURLCredentialPersistenceForSession];
+    theRange.location = 0;
+    theRange.length = [allLocations count] / 10;
     
-    NSURLProtectionSpace *protectionSpace = [[NSURLProtectionSpace alloc]
-                                             initWithHost:@"http://@hooroo.localhost"
-                                             port:5000
-                                             protocol:@"http"
-                                             realm:nil
-                                             authenticationMethod:nil];
-    
-    
-    [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:credential
-                                                        forProtectionSpace:protectionSpace];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://hooroo.localhost:5000/extranet/locations.json"]];
-    
-    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
-    
-    
-    //    NSData* data = [NSData dataWithContentsOfURL:url];
-    
-    NSMutableArray *locations = [[NSMutableArray alloc] init];
-    
-    NSError* error;
-    
-    NSArray* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if (!json) {
-        NSLog(@"Error = %@", error);
-        return locations;
-    }
-    
-    for (id locationJson in json) {
-        NSLog(@"%@", locationJson);
-        
-        NSNumber *x1 = [locationJson objectForKey:@"x1"];
-        NSNumber *x2 = [locationJson objectForKey:@"x2"];
-        NSNumber *y1 = [locationJson objectForKey:@"y2"];
-        NSNumber *y2 = [locationJson objectForKey:@"y2"];
-        
-        NSLog(@"%d,%d,%d,%d", [x1 intValue], [x2 intValue], [y1 intValue], [y2 intValue]);
-    }
-    
-    return locations;
-}
+    halfArray = [allLocations subarrayWithRange:theRange];
+    return halfArray;
+ }
 
 @end
 
+//+ (NSArray *)getJsonFromServer {
+//    
+//    NSURLCredential *credential = [NSURLCredential credentialWithUser:@"test+product_manager@jqdev.net"
+//                                                             password:@"password123"
+//                                                          persistence:NSURLCredentialPersistenceForSession];
+//    
+//    NSURLProtectionSpace *protectionSpace = [[NSURLProtectionSpace alloc]
+//                                             initWithHost:@"http://@hooroo.localhost"
+//                                             port:5000
+//                                             protocol:@"http"
+//                                             realm:nil
+//                                             authenticationMethod:nil];
+//    
+//    
+//    [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:credential
+//                                                        forProtectionSpace:protectionSpace];
+//    
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://hooroo.localhost:5000/extranet/locations.json"]];
+//    
+//    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
+//    
+//    
+//    //    NSData* data = [NSData dataWithContentsOfURL:url];
+//    
+//    NSMutableArray *locations = [[NSMutableArray alloc] init];
+//    
+//    NSError* error;
+//    
+//    NSArray* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+//    if (!json) {
+//        NSLog(@"Error = %@", error);
+//        return locations;
+//    }
+//    
+//    for (id locationJson in json) {
+//        NSLog(@"%@", locationJson);
+//        
+//        NSNumber *x1 = [locationJson objectForKey:@"x1"];
+//        NSNumber *x2 = [locationJson objectForKey:@"x2"];
+//        NSNumber *y1 = [locationJson objectForKey:@"y2"];
+//        NSNumber *y2 = [locationJson objectForKey:@"y2"];
+//        
+//        NSLog(@"%d,%d,%d,%d", [x1 intValue], [x2 intValue], [y1 intValue], [y2 intValue]);
+//    }
+//    
+//    return locations;
+//}
 
-//    NSURLRequest *request =
-//    [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://user:pass@example.com"]];
-//
-//    [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
-//
-//    NSURL *url = [NSURL URLWithString: @""];
 
-
-//        SkillTree *skillTree = [[SkillTree alloc] initWithName: name score:score date:date];
-//        [skillTrees addObject:skillTree];
-//
-//        for (id levelJson in [skillTreeJson objectForKey:@"levels"]) {
-//            Level *level = [[Level alloc] initWithName:[levelJson objectForKey:@"name"] score:[levelJson objectForKey:@"score"]];
-//            [[skillTree levels] addObject:level];
-//
-//            for (id taskJson in [levelJson objectForKey:@"tasks"]) {
-//                NSNumber *status = [taskJson objectForKey:@"status"];
-//                NSLog(@"status is %@", status);
-//
-//                Task *task = [[Task alloc] initWithTaskId:[taskJson objectForKey:@"id"] name:[taskJson objectForKey:@"name"] description:[taskJson objectForKey:@"description"] status:([status intValue] == 1)];
-//                [[level tasks] addObject:task];
-//
-//            }
-//        }
-//        NSLog(@">>>>>>>>> Dumping in Skill Tree Data Controller getJson for %@", name);
-//        [skillTree dump];

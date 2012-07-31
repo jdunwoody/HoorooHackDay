@@ -18,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *chosenLocationsView;
 @property(strong, nonatomic) NSMutableArray *chosenLocations;
 @property (weak, nonatomic) IBOutlet UIButton *quizButton;
+@property(strong, nonatomic) NSString *bookingId;
+@property (weak, nonatomic) IBOutlet UILabel *instructions;
 
 @end

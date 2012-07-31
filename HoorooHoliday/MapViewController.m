@@ -21,8 +21,7 @@
 @end
 
 @implementation MapViewController
-@synthesize quizButton;
-@synthesize chosenLocationsView;
+@synthesize instructions, quizButton, chosenLocationsView, bookingId;
 
 @synthesize mapView, allLocations, chosenLocations;
 
@@ -37,7 +36,16 @@
 
 - (void)viewDidLoad
 {
-    self.allLocations = [[NSMutableArray alloc] init];
+    if (self.bookingId == nil) {
+        self.instructions.text = @"Choose locations on the map to take a quiz and test your knowledge";
+        self.allLocations = [LocationService loadLocationsFromLocalJson];
+        
+    } else {
+        self.instructions.text = @"The locations you have visited before are on the map. Take the quiz.";
+        self.allLocations = [LocationService loadLocationsFromBooking: self.bookingId];
+    }
+    
+//    self.allLocations = [[NSMutableArray alloc] init];
     self.chosenLocations = [[NSMutableArray alloc] init];
     
     CLLocationCoordinate2D center;
@@ -65,7 +73,6 @@
     CLLocationCoordinate2D annotationCenter;
     MapAnnotation *annotation;
     
-    self.allLocations = [LocationService loadLocationsFromLocalJson];
     
     for(Location *location in allLocations) {
         
@@ -91,6 +98,7 @@
 {
     [self setChosenLocationsView:nil];
     [self setQuizButton:nil];
+    [self setInstructions:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
