@@ -10,6 +10,7 @@
 #import "QuizService.h"
 #import "Quiz.h"
 #import "QuestionCell.h"
+#import "MapViewController.h"
 
 @implementation ExperienceQuizUIViewController
 @synthesize quizLocationImage;
@@ -27,7 +28,7 @@
 
 - (void) viewDidLoad
 {
-    
+    self.title = @"How much do you know?";
     self.quiz = [self.quizes objectAtIndex: [self.quizNumber integerValue]];
     
     self.quizTitle.text = quiz.title;
@@ -91,6 +92,11 @@
     [self setQuizLocationImage:nil];
     [self setNextQuizButton:nil];
     [super viewDidUnload];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -167,8 +173,19 @@
     return cell;
 }
 
-- (IBAction)finishedWithQuiz:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+- (IBAction)finishedWithQuiz:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
+    //    //    [self.navigationController popToViewController:(UIViewController *)viewController animated:NO];
+    //
+    //    NSLog(@"Top view controller %@, %@", self.navigationController.topViewController.title, [[self.navigationController.topViewController class] description]);
+    //
+    //    while (![self.navigationController.topViewController isKindOfClass:[MapViewController class]]) {
+    //        NSLog(@"Top view controller %@, %@, %@", self.navigationController.topViewController.title, [self.navigationController.topViewController class],[[self.navigationController.topViewController class] description]);
+    //        [self.navigationController popViewControllerAnimated:YES];
+    //    }
+    //    NSLog(@"Top view controller %@, %@", self.navigationController.topViewController.title, [[self.navigationController.topViewController class] description]);
 }
 
 - (int) nextQuizNumber

@@ -54,5 +54,15 @@
 //    }
 //}
 
+- (IBAction)useBookingEmail:(id)sender {
+        
+    // do whatever you want with this text field
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+}
 
 @end
